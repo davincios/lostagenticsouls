@@ -38,7 +38,7 @@ export default function Header() {
         </Link>
 
         {/* Desktop nav */}
-        <div className="hidden md:flex" style={{ gap: 32, display: "flex" }}>
+        <div className="hidden md:flex" style={{ gap: 32 }}>
           {navLinks.map(({ href, label }) => (
             <a
               key={href}
