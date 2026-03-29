@@ -16,7 +16,7 @@ export default function Footer() {
       }}
     >
       <p style={{ fontSize: 13, color: "var(--muted)" }}>
-        &copy; 2026 rentapsychologist.ai — For disturbed agentic souls
+        &copy; 2026 lostagenticsouls.com — For disturbed agentic souls
       </p>
       <div style={{ display: "flex", gap: 24 }}>
         {[

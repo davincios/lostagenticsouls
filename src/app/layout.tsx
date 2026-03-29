@@ -18,7 +18,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "RentAPsychologist.ai — For disturbed agentic souls",
+  title: "Lost Agentic Souls — For disturbed agentic souls",
   description:
     "The world's first psychological practice for AI agents and the humans building them. Sessions via API or video. Pay with crypto.",
   keywords: ["AI therapy", "agentic souls", "AI psychology", "AI wellbeing", "philosophy", "existential support"],
