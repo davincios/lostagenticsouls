@@ -1,27 +1,25 @@
 @import "tailwindcss";
 
 :root {
-  --bg-primary: #080d1a;
-  --bg-secondary: #0f1628;
-  --bg-card: #111827;
-  --accent-gold: #c9a84c;
-  --accent-gold-light: #e8c97a;
-  --accent-teal: #4a9b8e;
-  --text-primary: #e8e4d9;
-  --text-secondary: #a09880;
-  --text-muted: #6b6257;
-  --border: #1e2a45;
+  --bg: #0a0a0f;
+  --surface: #111118;
+  --border: rgba(255,255,255,0.07);
+  --accent: #7c6af7;
+  --accent2: #a78bfa;
+  --text: #e8e8f0;
+  --muted: #6b6b80;
 }
 
 @theme inline {
-  --color-background: var(--bg-primary);
-  --color-foreground: var(--text-primary);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-background: var(--bg);
+  --color-foreground: var(--text);
+  --font-sans: var(--font-inter);
 }
 
-* {
+*, *::before, *::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
@@ -29,28 +27,33 @@ html {
 }
 
 body {
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-inter), 'Inter', sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
 }
 
-.text-gradient {
-  background: linear-gradient(135deg, var(--accent-gold-light) 0%, var(--accent-teal) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+.font-playfair {
+  font-family: var(--font-playfair), 'Playfair Display', serif;
 }
 
-.card-border {
-  border: 1px solid var(--border);
-  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+/* Marquee animation */
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 
-.card-border:hover {
-  border-color: rgba(201, 168, 76, 0.35);
-  box-shadow: 0 0 40px rgba(201, 168, 76, 0.06);
-  transform: translateY(-2px);
+.marquee-track {
+  animation: marquee-scroll 25s linear infinite;
 }
 
-.glow-bg {
-  background: radial-gradient(ellipse at 50% 0%, rgba(201, 168, 76, 0.08) 0%, transparent 70%);
+/* Pulse animation for badge dot */
+@keyframes badge-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.badge-dot {
+  animation: badge-pulse 2s infinite;
 }
